@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import {
 	Carousel,
 	CarouselContent,
@@ -18,7 +19,7 @@ export default async function HomeMain() {
 				{items.map((item: CartItem, index: number) => (
 					<CarouselItem
 						key={index}
-						className="relative min-h-screen w-full flex items-center justify-center"
+						className="relative min-h-screen w-full flex flex-col items-center justify-center"
 					>
 						<div>
 							<Image
@@ -27,18 +28,33 @@ export default async function HomeMain() {
 								fill
 								className="object-cover absolute -z-10"
 							/>
-							<div className="flex items-center justify-center -translate-y-24">
-								<div>
-									<p className="text-[15rem] font-bold text-white">
-										{item.brand}
-									</p>
-									<p className="text-2xl -translate-y-24 font-medium">
-										Code: {item.code}
+							<div className="flex flex-col items-center justify-center xl:-translate-y-24">
+								<div className="flex gap-4 xl:gap-0">
+									<div>
+										<p className="text-[10rem] xl:text-[15rem] font-bold text-white">
+											{item.brand}
+										</p>
+										<p className="text-xl xl:text-[2xl] -translate-y-16 xl:-translate-y-24 font-medium">
+											Code: {item.code}
+										</p>
+									</div>
+									<p className="text-[10rem] xl:text-[15rem] font-bold text-white xl:translate-y-36">
+										{item.name}
 									</p>
 								</div>
-								<p className="text-[15rem] font-bold text-white translate-y-36">
-									{item.name}
-								</p>
+							</div>
+							<div className="flex items-center justify-center">
+								<div className="flex flex-col">
+									<p className="text-gray-100 font-medium line-through text-center text-6xl">
+										${item.prev_price}
+									</p>
+									<p className="font-bold text-8xl text-red-500">
+										${item.price}
+									</p>
+									<Button className="text-2xl p-6 rounded-3xl">
+										Add to Bag
+									</Button>
+								</div>
 							</div>
 						</div>
 					</CarouselItem>
