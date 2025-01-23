@@ -13,7 +13,9 @@ app.use('/images', express.static(path.join(__dirname, 'public/images')));
 const availableItems = [
 	{
 		id: 1,
-		name: 'Adidas Gazelle',
+		brand: 'Adidas',
+		name: 'Gazelle',
+		code: 'JH5404',
 		prev_price: 170.5,
 		price: 142.99,
 		main_description: 'Classic 3-Stripes trainers to dress up or down.',
