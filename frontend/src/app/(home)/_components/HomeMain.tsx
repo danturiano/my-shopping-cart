@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
 	Carousel,
 	CarouselContent,
@@ -8,8 +7,8 @@ import {
 } from '@/components/ui/carousel';
 import { CartItem } from '@/lib/types';
 import Image from 'next/image';
-import React from 'react';
 import { getItems } from '../_lib/service';
+import AddToCartBtn from './AddToCartBtn';
 
 export default async function HomeMain() {
 	const items = await getItems();
@@ -51,9 +50,7 @@ export default async function HomeMain() {
 									<p className="font-bold text-8xl text-red-500">
 										${item.price}
 									</p>
-									<Button className="text-2xl p-6 rounded-3xl">
-										Add to Bag
-									</Button>
+									<AddToCartBtn item={item} />
 								</div>
 							</div>
 						</div>

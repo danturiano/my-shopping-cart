@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Search, ShoppingBag } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 
 const navItems = ['Brands', 'Men', 'Women', 'Kids'];
@@ -31,12 +32,14 @@ export default function HomeNav() {
 				>
 					<Search />
 				</Button>
-				<Button
-					className="rounded-full h-10 w-10 bg-white text-black [&_svg]:size-5"
-					size={'icon'}
-				>
-					<ShoppingBag />
-				</Button>
+				<Link href={'/cart'}>
+					<Button
+						className="rounded-full h-10 w-10 bg-white text-black [&_svg]:size-5"
+						size={'icon'}
+					>
+						<ShoppingBag />
+					</Button>
+				</Link>
 			</div>
 		</nav>
 	);
