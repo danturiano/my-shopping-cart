@@ -25,16 +25,26 @@ const availableItems = [
 	},
 	{
 		id: 2,
-		name: 'Notebook',
-		price: 4.99,
-		description: '100-page lined notebook',
+		brand: 'Jordan',
+		name: 'Retro Low',
+		code: 'DZ4137-106',
+		prev_price: 190.55,
+		price: 162.95,
+		main_description: 'Classic 3-Stripes trainers to dress up or down.',
+		description:
+			'The adidas Gazelle started life in the 1970s as a training shoe but has since become a lifestyle staple. This edition is crafted with a leather and synthetic upper thats built to last',
 		image: 'http://localhost:3001/images/j1.jpg',
 	},
 	{
 		id: 3,
-		name: 'Notebook',
-		price: 4.99,
-		description: '100-page lined notebook',
+		brand: 'Jordan',
+		name: 'O/W Chicago',
+		code: 'AA3834-101',
+		prev_price: 999.25,
+		price: 620.99,
+		main_description: 'Classic 3-Stripes trainers to dress up or down.',
+		description:
+			'The adidas Gazelle started life in the 1970s as a training shoe but has since become a lifestyle staple. This edition is crafted with a leather and synthetic upper thats built to last',
 		image: 'http://localhost:3001/images/j2.jpg',
 	},
 ];
