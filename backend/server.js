@@ -38,7 +38,7 @@ const availableItems = [
 	{
 		id: 3,
 		brand: 'Jordan',
-		name: 'O/W Chicago',
+		name: 'Chicago',
 		code: 'AA3834-101',
 		prev_price: 999.25,
 		price: 620.99,
