@@ -13,3 +13,7 @@ To run the application, you need both the frontend and backend servers running s
 
 Backend: Make sure you have node server.js running in the backend folder.
 Frontend: Run npm run dev (or the equivalent for yarn/pnpm/bun) in the frontend folder.
+
+## Resources
+
+https://dribbble.com/shots/22017398-E-commerce-Web-Design
