@@ -3,8 +3,10 @@
 import { Button } from '@/components/ui/button';
 import { CartItem } from '@/lib/types';
 import { addItemToCart, getItemsInCart } from '../_lib/service';
+import { useShop } from './ContextProvider';
 
 export default function AddToCartBtn({ item }: { item: CartItem }) {
+	const { onAddCart } = useShop();
 	const handleAddToCart = async () => {
 		try {
 			const itemsInCart = await getItemsInCart();
@@ -14,6 +16,7 @@ export default function AddToCartBtn({ item }: { item: CartItem }) {
 
 			if (itemExist) return;
 
+			onAddCart();
 			await addItemToCart(item);
 		} catch (error) {
 			console.log(error);
